@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Verdu · Frescura del campo a tu mesa</title>
+  <meta name="description" content="Verdulería online con frutas, verduras y productos frescos de calidad, directo del campo a tu hogar.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 300:'#6ee7b7', 400:'#34d399', 500:'#10b981', 600:'#059669', 700:'#047857', 800:'#065f46', 900:'#064e3b' },
+            accent:  { 500:'#84cc16', 600:'#65a30d' }
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white">
+  <div id="navbar"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative bg-gradient-to-br from-primary-50 via-white to-emerald-50 overflow-hidden">
+      <div class="absolute inset-0 opacity-20" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><circle cx=%2225%22 cy=%2225%22 r=%22150%22 fill=%22%2310b981%22 opacity=%220.1%22/></svg>');"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="badge bg-primary-100 text-primary-700 mb-4">🚚 Envío gratis en CABA +$5.000</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
+              Frescura del <span class="text-primary-600">campo</span> a tu mesa
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+              Frutas, verduras y productos orgánicos seleccionados a diario por los mejores especialistas. Hacemos que comer sano sea fácil y delicioso.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="productos.html" class="btn-primary text-base">Ver productos</a>
+              <a href="nosotros.html" class="btn-secondary">Conocé más</a>
+            </div>
+            <div class="mt-10 flex items-center gap-8 text-sm">
+              <div><span class="block text-2xl font-bold text-primary-600">15+</span><span class="text-slate-600">Años</span></div>
+              <div><span class="block text-2xl font-bold text-primary-600">5000+</span><span class="text-slate-600">Clientes felices</span></div>
+              <div><span class="block text-2xl font-bold text-primary-600">100%</span><span class="text-slate-600">Frescos</span></div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              <img src="https://picsum.photos/seed/verduleria-hero/800/800"
+                   alt="Canasta de verduras frescas"
+                   class="w-full h-full object-cover"
+                   onerror="this.onerror=null;this.src='assets/fallback.svg'">
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-fade-in">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl">🥗</div>
+              <div>
+                <p class="font-bold text-slate-800">+200 productos</p>
+                <p class="text-xs text-slate-500">siempre frescos</p>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 hidden md:flex items-center gap-3 animate-fade-in">
+              <div class="w-12 h-12 bg-accent-500/20 rounded-xl flex items-center justify-center text-2xl">🌱</div>
+              <div>
+                <p class="font-bold text-slate-800">100% orgánico</p>
+                <p class="text-xs text-slate-500">certificado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Explorá nuestras categorías</h2>
+          <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Encontrá todo lo que necesitás para una alimentación saludable</p>
+        </div>
+        <div id="categoriasGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="py-16 md:py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Productos destacados</h2>
+            <p class="mt-2 text-slate-600">Los favoritos de nuestros clientes</p>
+          </div>
+          <a href="productos.html" class="btn-secondary">Ver todos →</a>
+        </div>
+        <div id="featuredGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"></div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">¿Por qué elegirnos?</h2>
+          <p class="mt-3 text-slate-600">Calidad, frescura y compromiso en cada entrega</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card p-6">
+            <div class="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center text-3xl mb-4">🌿</div>
+            <h3 class="font-bold text-lg text-slate-800 mb-2">Frescura garantizada</h3>
+            <p class="text-slate-600 text-sm">Recolectamos a diario para que recibas los productos más frescos del mercado.</p>
+          </div>
+          <div class="card p-6">
+            <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-4">🌱</div>
+            <h3 class="font-bold text-lg text-slate-800 mb-2">Productos orgánicos</h3>
+            <p class="text-slate-600 text-sm">Selección especial de productores locales con certificación orgánica.</p>
+          </div>
+          <div class="card p-6">
+            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl mb-4">🚚</div>
+            <h3 class="font-bold text-lg text-slate-800 mb-2">Envío rápido</h3>
+            <p class="text-slate-600 text-sm">Entrega el mismo día en pedidos antes de las 14 hs en CABA y GBA.</p>
+          </div>
+          <div class="card p-6">
+            <div class="w-14 h-14 bg-rose-100 rounded-2xl flex items-center justify-center text-3xl mb-4">💚</div>
+            <h3 class="font-bold text-lg text-slate-800 mb-2">Mejor calidad</h3>
+            <p class="text-slate-600 text-sm">Selección rigurosa de cada producto que llega a tu mesa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER PROMOCIONAL -->
+    <section class="py-16 md:py-20 bg-gradient-to-r from-primary-600 to-emerald-700 text-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">¡10% OFF en tu primera compra!</h2>
+        <p class="text-lg text-emerald-100 mb-8">Usá el cupón <span class="font-bold bg-white/20 px-3 py-1 rounded-lg">VERDE10</span> al finalizar tu pedido</p>
+        <a href="registro.html" class="inline-block bg-white text-primary-700 font-bold px-8 py-3 rounded-lg hover:bg-slate-100 transition">Registrarme ahora</a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Recibí nuestras ofertas</h2>
+        <p class="text-slate-600 mb-8">Suscribite a nuestro newsletter y enterate de todas las promociones y novedades.</p>
+        <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="email" required placeholder="tu@email.com" class="input flex-1">
+          <button class="btn-primary">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/landing.js"></script>
+</body>
+</html>

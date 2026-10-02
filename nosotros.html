@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros · La Verdu</title>
+  <meta name="description" content="Conocé nuestra historia, misión y el equipo detrás de La Verdu.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 300:'#6ee7b7', 400:'#34d399', 500:'#10b981', 600:'#059669', 700:'#047857', 800:'#065f46', 900:'#064e3b' }, accent: { 500:'#84cc16', 600:'#65a30d' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="bg-gradient-to-br from-primary-50 to-emerald-50 py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900">Nuestra historia</h1>
+        <p class="mt-4 text-lg text-slate-600">Más de 15 años llevando frescura y calidad a tu mesa</p>
+      </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 prose prose-slate">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Una familia, una pasión</h2>
+            <p class="text-slate-600 mb-4 leading-relaxed">La Verdu nació en 2009 como un pequeño puesto familiar en el mercado de San Telmo. Lo que comenzó como un sueño de llevar productos frescos y accesibles a los vecinos, hoy se transformó en una verdulería online con alcance a toda la Ciudad y el Gran Buenos Aires.</p>
+            <p class="text-slate-600 mb-4 leading-relaxed">Trabajamos directamente con productores locales de la zona hortícola de La Plata y del cinturón verde de Buenos Aires, asegurando trazabilidad, frescura y comercio justo.</p>
+            <p class="text-slate-600 leading-relaxed">Hoy, miles de familias confían en nosotros para incorporar productos frescos y saludables a su alimentación diaria.</p>
+          </div>
+          <div class="aspect-square rounded-3xl overflow-hidden shadow-xl">
+            <img src="https://picsum.photos/seed/farmer-vegetables/600/600" alt="Productor cosechando verduras"
+                 class="w-full h-full object-cover"
+                 onerror="this.onerror=null;this.src='assets/fallback.svg'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISIÓN VISIÓN VALORES -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card p-8">
+            <div class="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center text-3xl mb-4">🎯</div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Misión</h3>
+            <p class="text-slate-600">Llevar productos frescos, saludables y de calidad a cada hogar, conectando a las familias con los mejores productores locales de manera práctica y accesible.</p>
+          </div>
+          <div class="card p-8">
+            <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-4">👁️</div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Visión</h3>
+            <p class="text-slate-600">Ser la verdulería online líder de la región, reconocida por nuestra calidad, compromiso con el productor local y por hacer de la cocina con productos frescos una experiencia accesible.</p>
+          </div>
+          <div class="card p-8">
+            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl mb-4">💚</div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Valores</h3>
+            <p class="text-slate-600">Frescura, calidad, transparencia, comercio justo, compromiso con el medio ambiente y pasión por lo que hacemos cada mañana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-16 bg-primary-600 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="statsGrid" class="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Nuestro equipo</h2>
+          <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Las personas que hacen posible La Verdu todos los días</p>
+        </div>
+        <div id="equipoGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">¿Listo para probar nuestros productos?</h2>
+        <p class="text-slate-600 mb-8">Mirá todo nuestro catálogo y hacenos tu primer pedido</p>
+        <a href="productos.html" class="btn-primary">Ver productos</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/nosotros.js"></script>
+</body>
+</html>

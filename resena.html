@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escribir reseña · La Verdu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 300:'#6ee7b7', 400:'#34d399', 500:'#10b981', 600:'#059669', 700:'#047857', 800:'#065f46', 900:'#064e3b' }, accent: { 500:'#84cc16', 600:'#65a30d' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <nav class="text-sm text-slate-500 mb-4">
+      <a href="perfil.html" class="hover:text-primary-600">Mi perfil</a> / <span class="text-slate-700">Escribir reseña</span>
+    </nav>
+
+    <div class="card p-8">
+      <h1 class="text-2xl font-extrabold text-slate-900 mb-1">Escribir reseña</h1>
+      <p class="text-slate-600 mb-6">Compartí tu experiencia con otros compradores</p>
+
+      <form id="resenaForm" class="space-y-5">
+        <div>
+          <label class="label">Producto *</label>
+          <select id="productoSelect" name="producto" required class="input"></select>
+        </div>
+
+        <div>
+          <label class="label">Calificación *</label>
+          <div class="flex items-center gap-3">
+            <div id="stars" class="star-rating text-3xl"></div>
+            <span id="ratingLabel" class="text-sm text-slate-500">Toca una estrella para calificar</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="label">Título *</label>
+          <input name="titulo" type="text" maxlength="60" required class="input" placeholder="Resumen en pocas palabras">
+        </div>
+
+        <div>
+          <label class="label">Comentario *</label>
+          <textarea name="comentario" rows="5" required class="input" placeholder="Contanos qué te pareció el producto..."></textarea>
+        </div>
+
+        <div class="flex gap-3">
+          <button type="submit" class="btn-primary flex-1">Publicar reseña</button>
+          <a href="perfil.html" class="btn-secondary">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/resena.js"></script>
+</body>
+</html>

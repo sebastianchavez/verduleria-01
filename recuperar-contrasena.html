@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar contraseña · La Verdu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 300:'#6ee7b7', 400:'#34d399', 500:'#10b981', 600:'#059669', 700:'#047857', 800:'#065f46', 900:'#064e3b' }, accent: { 500:'#84cc16', 600:'#65a30d' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="max-w-md mx-auto px-4 py-12">
+    <div id="recuperarContent">
+      <div class="card p-8">
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 mx-auto bg-primary-100 rounded-full flex items-center justify-center text-3xl mb-3">🔑</div>
+          <h1 class="text-2xl font-extrabold text-slate-900">¿Olvidaste tu contraseña?</h1>
+          <p class="text-slate-600 text-sm mt-2">Te enviaremos un enlace para restablecerla</p>
+        </div>
+
+        <form id="recuperarForm" class="space-y-4">
+          <div>
+            <label class="label">Email</label>
+            <input name="email" type="email" required class="input" placeholder="tu@email.com">
+          </div>
+          <button type="submit" class="btn-primary w-full">Enviar enlace de recuperación</button>
+        </form>
+
+        <p class="text-center text-sm text-slate-600 mt-6">
+          <a href="login.html" class="text-primary-600 font-semibold hover:underline">← Volver al login</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <g transform="translate(200 200)">
+    <circle r="80" fill="#10b981" opacity="0.15"/>
+    <circle r="55" fill="#10b981" opacity="0.25"/>
+    <text y="22" font-size="100" text-anchor="middle">🥬</text>
+  </g>
+  <text x="200" y="370" font-size="14" text-anchor="middle" fill="#047857" font-family="Inter, sans-serif" font-weight="600">La Verdu</text>
+</svg>
