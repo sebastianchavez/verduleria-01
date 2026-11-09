@@ -28,7 +28,7 @@
     const s = INFO_TIENDA.stats;
     const data = [
       { v: s.años, label: 'Años en el mercado', icon: '🗓️' },
-      { v: '+' + s.pedidos.toLocaleString('es-AR'), label: 'Clientes felices', icon: '😊' },
+      { v: '+' + s.pedidos.toLocaleString('es-CL'), label: 'Clientes felices', icon: '😊' },
       { v: '+' + s.productos, label: 'Productos', icon: '🥬' },
       { v: s.satisfaccion + '%', label: 'Satisfacción', icon: '⭐' }
     ];

@@ -36,7 +36,7 @@
           <div>
             <img src="assets/logo.svg" class="h-10 w-10">
             <p class="font-bold text-lg text-slate-800 mt-2">La<span class="text-primary-600">Verdu</span></p>
-            <p class="text-xs text-slate-500">Av. Corrientes 1234, CABA</p>
+            <p class="text-xs text-slate-500">Av. Providencia 1234, Providencia, Santiago</p>
           </div>
           <div class="text-right">
             <p class="text-xs text-slate-500 uppercase">Comprobante</p>

@@ -77,10 +77,10 @@ const INFO_TIENDA = {
   nombre: 'La Verdu',
   slogan: 'Frescura del campo a tu mesa',
   descripcion: 'Somos una verdulería familiar con más de 15 años llevando productos frescos y de calidad a tu hogar.',
-  direccion: 'Av. Corrientes 1234, CABA, Argentina',
-  telefono: '+54 11 4567-8900',
-  email: 'contacto@laverdu.com',
-  whatsapp: '+54 9 11 4567-8900',
+  direccion: 'Av. Providencia 1234, Providencia, Santiago, Chile',
+  telefono: '+56 2 2345 6789',
+  email: 'contacto@laverdu.cl',
+  whatsapp: '+56 9 8765 4321',
   horarios: [
     { dia: 'Lunes a Viernes', horario: '08:00 - 20:00' },
     { dia: 'Sábados',          horario: '08:00 - 20:00' },
@@ -91,9 +91,9 @@ const INFO_TIENDA = {
     facebook: 'https://facebook.com/laverdu',
     instagram: 'https://instagram.com/laverdu',
     twitter: 'https://twitter.com/laverdu',
-    whatsapp: 'https://wa.me/5491145678900'
+    whatsapp: 'https://wa.me/56987654321'
   },
-  mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016632.740100!2d-58.4094!3d-34.4159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDI0JzU3LjIiUyA1OMKwMjQnMzUuOCJX!5e0!3m2!1ses!2sar!4v1234567890',
+  mapaEmbed: 'https://maps.google.com/maps?q=Santiago%2C%20Chile&output=embed',
   stats: {
     años: 15,
     pedidos: 5000,

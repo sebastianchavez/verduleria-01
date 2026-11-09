@@ -5,7 +5,7 @@
 const Utils = {
   formatPrice(amount) {
     if (typeof amount !== 'number') amount = Number(amount) || 0;
-    return new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 }).format(amount);
+    return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 }).format(amount);
   },
 
   getQueryParam(key) {
@@ -35,14 +35,14 @@ const Utils = {
     if (!date) return '';
     const d = new Date(date);
     if (isNaN(d)) return '';
-    return d.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    return d.toLocaleDateString('es-CL', { day: '2-digit', month: '2-digit', year: 'numeric' });
   },
 
   formatDateTime(date) {
     if (!date) return '';
     const d = new Date(date);
     if (isNaN(d)) return '';
-    return d.toLocaleString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    return d.toLocaleString('es-CL', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
   },
 
   escape(str) {

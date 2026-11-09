@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -25,31 +21,31 @@ body {
 
 /* Components */
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-semibold transition shadow-sm hover:shadow disabled:opacity-50 disabled:cursor-not-allowed;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;transition:background-color .2s,box-shadow .2s;padding:.625rem 1.25rem;border-radius:.5rem;background:#059669;color:white;box-shadow:0 1px 2px #0001;
 }
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white hover:bg-slate-50 text-slate-700 font-semibold border border-slate-200 transition shadow-sm;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;transition:background-color .2s,box-shadow .2s;padding:.625rem 1.25rem;border-radius:.5rem;background:white;color:#334155;border:1px solid #e2e8f0;
 }
 .btn-ghost {
-  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-slate-700 hover:bg-slate-100 font-medium transition;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;transition:background-color .2s,box-shadow .2s;padding:.5rem 1rem;border-radius:.5rem;color:#334155;font-weight:500;
 }
 .btn-danger {
-  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold transition;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;transition:background-color .2s,box-shadow .2s;padding:.625rem 1.25rem;border-radius:.5rem;background:#dc2626;color:white;
 }
 
 .input {
-  @apply w-full px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition;
+  width:100%;padding:.625rem 1rem;border-radius:.5rem;border:1px solid #e2e8f0;background:white;color:#1e293b;box-sizing:border-box;
 }
 .label {
-  @apply block text-sm font-medium text-slate-700 mb-1.5;
+  display:block;font-size:.875rem;font-weight:500;color:#334155;margin-bottom:.375rem;
 }
 
 .card {
-  @apply bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden;
+  background:white;border-radius:.75rem;box-shadow:0 1px 2px #0001;border:1px solid #f1f5f9;overflow:hidden;
 }
 
 .badge {
-  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold;
+  display:inline-flex;align-items:center;padding:.125rem .5rem;border-radius:9999px;font-size:.75rem;font-weight:600;
 }
 
 /* Animations */
@@ -60,11 +56,14 @@ body {
 
 /* Toast */
 .toast {
-  @apply fixed bottom-4 right-4 px-5 py-3 rounded-lg shadow-lg text-white font-medium z-50 animate-slide-up;
+  position:fixed;bottom:1rem;right:1rem;padding:.75rem 1.25rem;border-radius:.5rem;box-shadow:0 10px 15px #0002;color:white;font-weight:500;z-index:50;animation:slideUp .4s ease-out;max-width:calc(100vw - 2rem);
 }
-.toast-success { @apply bg-emerald-600; }
-.toast-error { @apply bg-red-600; }
-.toast-info { @apply bg-slate-800; }
+.toast-success {
+  background:#059669; }
+.toast-error {
+  background:#dc2626; }
+.toast-info {
+  background:#1e293b; }
 
 /* Print styles */
 @media print {
@@ -88,3 +87,27 @@ body {
 /* Mobile nav */
 .mobile-menu { transform: translateX(-100%); transition: transform .3s; }
 .mobile-menu.open { transform: translateX(0); }
+/* Responsive layout: preserve content and keep controls within the viewport. */
+:where(main, section, article, aside, header, footer, nav, form, fieldset, .flex > *, .grid > *) { min-width: 0; }
+img, video, iframe { max-width: 100%; }
+:where(input, select, textarea) { max-width: 100%; }
+:where(p, h1, h2, h3, a, label) { overflow-wrap: break-word; }
+@media (max-width: 767px) {
+  .px-40, .px-20, .px-16, .px-12, .px-10 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="min-w-["] { min-width: 0 !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  .toast-notification { max-width: calc(100vw - 2rem); right: 1rem; }
+}
+
+/* Tablet navigation, footer wrapping, and decorative accents. */
+.material-symbols-outlined { flex-shrink: 0; overflow-wrap: normal; white-space: nowrap; }
+footer li, footer a { overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+  footer .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .absolute.-right-6 { right: 0; }
+}
+
+.btn-primary:hover { filter:brightness(.93); }
+.btn-secondary:hover, .btn-ghost:hover { background:#f8fafc; }
+.input:focus, .input-field:focus { outline:2px solid var(--color-primary, #c9a961); outline-offset:2px; }
+button:disabled { opacity:.5;cursor:not-allowed; }
